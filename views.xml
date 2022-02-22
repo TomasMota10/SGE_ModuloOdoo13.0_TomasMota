@@ -1,0 +1,24 @@
+<odoo>
+    <record id="view_tree_todo" model="ir.ui.view">
+        <field name="name">view.tree.todo</field>
+        <field name="model">lista.muebles</field>
+        <field name="arch" type="xml">
+            <tree>
+                <field name="nombre"/>
+                <field name="descripcion"/>
+                <field name="categoria"/>
+                <field name="productstatus"/>
+                <field name="empresaorigen"/>
+                <field name="precioventa"/>
+            </tree>
+        </field>
+    </record>
+
+    <record id="action_view_todo" model="ir.actions.act_window">
+        <field name="name">Lista de Gestión de Muebles</field>
+        <field name="res_model">lista.muebles</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+
+    <menuitem id="menu_todo" parent="" action="module_listamuebles.action_view_todo"/>
+</odoo>
